@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#010B15">
+  <meta name="color-scheme" content="dark">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Abdulrahman Al-Gharbi · Full Stack Developer, Systems &amp; Cybersecurity</title>
+  <meta name="description" content="Full Stack Developer building secure web and Android applications and open-source digital forensics tools. Merged contributions to ForensicArtifacts and Velociraptor. Open to work.">
+  <link rel="canonical" href="https://algharbi.dev/">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Abdulrahman Al-Gharbi">
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type"        content="website">
+  <meta property="og:site_name"   content="Abdulrahman Al-Gharbi">
+  <meta property="og:url"         content="https://algharbi.dev/">
+  <meta property="og:title"       content="Abdulrahman Al-Gharbi · Full Stack Developer, Systems &amp; Cybersecurity">
+  <meta property="og:description" content="Full Stack Developer building secure web and Android applications, backend systems and open-source digital forensics tools. Open to full-time, freelance and internship roles.">
+  <meta property="og:image"       content="https://algharbi.dev/images/og-card.png">
+  <meta property="og:image:width"  content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt"    content="Abdulrahman Al-Gharbi, Full Stack Developer, Systems and Cybersecurity">
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="Abdulrahman Al-Gharbi · Full Stack Developer, Systems &amp; Cybersecurity">
+  <meta name="twitter:description" content="Full Stack Developer building secure web and Android applications, backend systems and open-source digital forensics tools. Open to work.">
+  <meta name="twitter:image"       content="https://algharbi.dev/images/og-card.png">
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23010B15'/%3E%3Cpath d='M7 22l6-12 6 12M9.5 18h7' fill='none' stroke='%2300C8F0' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M26 14.5a4.5 4.5 0 1 0 0 3' fill='none' stroke='%2300E87A' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E">
+  <noscript><style>html #boot{display:none!important}html body .r{opacity:1!important;transform:none!important}html body .hire-float{display:none!important}</style></noscript>
+
+  <link rel="preload" href="fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/space-grotesk-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.css?v=7">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Abdulrahman Al-Gharbi",
+    "url": "https://algharbi.dev/",
+    "image": "https://algharbi.dev/images/photo-hero.jpg",
+    "jobTitle": "Full Stack Developer",
+    "address": { "@type": "PostalAddress", "addressLocality": "Ibb", "addressCountry": "YE" },
+    "affiliation": { "@type": "CollegeOrUniversity", "name": "Alqalam University" },
+    "knowsLanguage": ["ar", "en"],
+    "knowsAbout": ["Full stack development", "Web development", "Android development", "Backend systems", "Computer networks", "Cybersecurity", "Digital forensics", "Incident response"],
+    "sameAs": ["https://github.com/Al-Gharbi", "https://linkedin.com/in/abdulrahman-al-gharbi"]
+  }
+  </script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- ══ BOOT SCREEN ═══════════════════════════════════════ -->
+<div id="boot" aria-hidden="true">
+  <div class="boot-inner">
+    <div class="boot-logo-wrap">
+      <div class="boot-logo">AG://ENGINEER</div>
+      <div class="boot-ver">SOFTWARE · SYSTEMS · SECURITY</div>
+    </div>
+    <div class="boot-div"></div>
+    <div class="boot-lines" id="boot-lines"></div>
+    <div class="boot-prog-wrap">
+      <div class="boot-prog-label">LOADING PORTFOLIO · PRESS ANY KEY TO SKIP</div>
+      <div class="boot-prog-bar"><div class="boot-prog-fill" id="boot-fill"></div></div>
+      <div class="boot-prog-pct" id="boot-pct">0%</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ BACKGROUND CANVAS ════════════════════════════════ -->
+<canvas id="bg-canvas" aria-hidden="true"></canvas>
+
+<!-- ══ SCROLL PROGRESS ══════════════════════════════════ -->
+<div id="scroll-bar" aria-hidden="true"></div>
+
+<!-- ══ NAVIGATION ═══════════════════════════════════════ -->
+<nav id="nav" aria-label="Main">
+  <div class="nav-inner">
+    <a href="#hero" class="nav-logo">
+      <span class="nav-logo-brk" aria-hidden="true">&gt;&gt;</span>
+      <span class="nav-logo-txt">AG://ENGINEER</span>
+    </a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#engineering">Software</a></li>
+      <li><a href="#projects">Security</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#certs">Certs</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="cv/Abdulrahman-Al-Gharbi-CV.pdf" download class="nav-cv" title="Download CV (PDF)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> CV</a>
+      <a href="mailto:aalgharbi651@gmail.com" class="nav-hire">
+        <span class="nav-hire-dot"></span>
+        <span>Hire Me</span>
+      </a>
+      <button class="nav-burger" id="nav-burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<main id="main">
+
+<!-- ══ HERO ══════════════════════════════════════════════ -->
+<section id="hero">
+  <div class="container">
+    <div class="hero-grid">
+
+      <!-- Left: Content -->
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="badge-pulse"></span>
+          <span>OPEN TO WORK</span>
+          <span class="badge-sep">·</span>
+          <span class="badge-id">FULL-TIME · FREELANCE · INTERNSHIP</span>
+        </div>
+
+        <h1 class="hero-name">
+          <span>Abdulrahman</span><br>
+          <span class="name-hl">Al-Gharbi</span>
+        </h1>
+
+        <p class="sr-only">Full Stack Developer, Android and backend developer, networks and systems, cybersecurity and DFIR.</p>
+        <div class="hero-role" dir="ltr" aria-hidden="true">
+          <span class="role-prefix">_</span>
+          <span id="role-text">Full Stack Developer</span>
+          <span class="cursor-blink"></span>
+        </div>
+
+        <p class="hero-desc">
+          Full Stack Developer focused on designing and building <strong>secure web and Android applications</strong>,
+          with hands-on experience in <strong>backend systems</strong> and open-source
+          <strong>digital forensics tools</strong>.
+        </p>
+
+        <div class="hero-roles">
+          <span class="hero-roles-lbl">LOOKING FOR</span>
+          <ul>
+            <li class="stag cyn">Full Stack Developer</li>
+            <li class="stag amb">Web &amp; Android Developer</li>
+            <li class="stag grn">Backend &amp; Systems</li>
+            <li class="stag vio">Networks &amp; IT</li>
+            <li class="stag red">Security / DFIR</li>
+          </ul>
+        </div>
+
+        <div class="hero-ctas">
+          <a href="#engineering" class="btn-primary">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><polyline points="9 15 11 17 15 12"/></svg>
+            View Projects
+          </a>
+          <a href="cv/Abdulrahman-Al-Gharbi-CV.pdf" download class="btn-cv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download CV</a>
+          <a href="#contact" class="btn-secondary">Contact</a>
+          <a href="https://github.com/Al-Gharbi" target="_blank" rel="noopener" class="btn-ghost">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            GitHub
+          </a>
+        </div>
+
+        <!-- stats: security figures are documented in each tool's docs/VALIDATION.md; PR counts are public on GitHub -->
+        <div class="hero-stats">
+          <div class="hstat">
+            <div class="hstat-val">2</div>
+            <div class="hstat-lbl">Full-stack apps built</div>
+          </div>
+          <div class="hstat-sep"></div>
+          <div class="hstat">
+            <div class="hstat-val">4</div>
+            <div class="hstat-lbl">Open-source tools</div>
+          </div>
+          <div class="hstat-sep"></div>
+          <div class="hstat">
+            <div class="hstat-val">5</div>
+            <div class="hstat-lbl">PRs merged upstream</div>
+          </div>
+          <div class="hstat-sep"></div>
+          <div class="hstat">
+            <div class="hstat-val">300+</div>
+            <div class="hstat-lbl">Automated tests</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: PHOTO -->
+      <div class="hero-photo-wrap hero-photo" id="profile-visual">
+        <div class="photo-top-label">
+          <span class="ptl-dot"></span>
+          ID :: AG-ENG-2026
+        </div>
+        <div class="pc-tl"></div>
+        <div class="pc-tr"></div>
+        <div class="pc-bl"></div>
+        <div class="pc-br"></div>
+        <div class="photo-inner">
+          <div class="photo-media">
+            <img src="images/photo-hero.jpg" alt="Portrait of Abdulrahman Al-Gharbi" width="1000" height="1250" decoding="async" fetchpriority="high">
+          </div>
+          <div class="photo-badge">
+            <div class="badge-role">
+              <span class="badge-role-dot"></span>
+              Full Stack Developer &amp; Security Engineer
+            </div>
+            <div class="badge-loc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="badge-loc-ico" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Ibb, Yemen &nbsp;·&nbsp; Available for Hire</div>
+            <div class="photo-hud-data">
+              <div class="phd-item"><span class="phd-k">PROJECTS</span><span class="phd-v">6</span></div>
+              <div class="phd-item"><span class="phd-k">TESTS</span><span class="phd-v">300+</span></div>
+              <div class="phd-item"><span class="phd-k">STATUS</span><span class="phd-v grn">OPEN</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="photo-glow-bar"></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ ABOUT ═════════════════════════════════════════════ -->
+<section id="about" class="sect-alt">
+  <div class="container">
+    <div class="sec-hdr">
+      <span class="sec-lbl">// ABOUT</span>
+      <h2 class="sec-ttl">Engineer. Builder. Investigator.</h2>
+      <div class="sec-rule"></div>
+    </div>
+    <div class="about-grid">
+      <div class="about-txt">
+        <p class="body-p r">I'm a <strong>Full Stack Developer</strong> and <strong>B.Sc. Cybersecurity &amp; Networks</strong> student at Alqalam University (Ibb, Yemen), graduating in 2027 who builds complete systems: web platforms, Android apps, backends and the security tooling around them. My two full-stack products &mdash; <strong>Nashiit</strong>, a multi-tenant Arabic SaaS I built solo, and <strong>HatKart</strong>, an Android + FastAPI licensing platform &mdash; cover everything from database design to secure client apps.</p>
+        <p class="body-p r">On the security side I write open-source <strong>DFIR tools</strong> and test them against real-world data instead of relying only on hand-made fixtures. Each one has a validation page that states what was checked, against what, and <strong>what was not</strong>. I also contribute upstream: <strong>5 merged pull requests</strong> to ForensicArtifacts and Velociraptor's registry_hunter, and an open Sigma rule.</p>
+        <p class="body-p r">Bilingual in <strong>Arabic and English</strong>, comfortable with Linux, networking fundamentals and CI/CD, and currently expanding into Cloud and DevSecOps. I'm looking for a team where I can build and secure real systems &mdash; web and app development, backend and systems engineering, networks and IT, or junior security work &mdash; full-time, internship or freelance.</p>
+      </div>
+      <div class="about-stats">
+        <div class="astat r"><div class="astat-n">2</div><div class="astat-l">Full-Stack Products (Web SaaS + Android)</div></div>
+        <div class="astat r"><div class="astat-n">4</div><div class="astat-l">Open-Source Tools with CI and Tests</div></div>
+        <div class="astat r"><div class="astat-n">5</div><div class="astat-l">Pull Requests Merged Upstream (ForensicArtifacts, Velociraptor)</div></div>
+        <div class="astat r"><div class="astat-n">25,408</div><div class="astat-l">Real $MFT Records Compared with an Independent Parser (0 differences)</div></div>
+        <div class="astat r"><div class="astat-n">2</div><div class="astat-l">Spoken Languages · AR / EN</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SERVICES ═══════════════════════════════════════════ -->
+<section id="services">
+  <div class="container">
+    <div class="sec-hdr">
+      <span class="sec-lbl">// WHAT I CAN DO FOR YOU</span>
+      <h2 class="sec-ttl">Areas of Work</h2>
+      <div class="sec-rule"></div>
+    </div>
+    <div class="svc-grid">
+
+      <div class="svc-card r">
+        <div class="svc-lvl cyn">WEB</div>
+        <div class="svc-ico cyn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+        <h3 class="svc-ti">Full Stack Web Development</h3>
+        <p class="svc-de">Full-stack web apps with Next.js, TypeScript, Node.js and PostgreSQL: multi-tenant architecture, role-based access, dashboards and Arabic RTL interfaces. Nashiit has six user roles, JWT with a blacklist and rate limiting.</p>
+        <div class="svc-tags"><span class="stag cyn">Next.js</span><span class="stag cyn">TypeScript</span><span class="stag cyn">PostgreSQL</span></div>
+        <div class="svc-foot">FOCUS :: WEB</div>
+      </div>
+
+      <div class="svc-card r">
+        <div class="svc-lvl amb">MOBILE</div>
+        <div class="svc-ico amb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div>
+        <h3 class="svc-ti">Android Apps</h3>
+        <p class="svc-de">Android apps in Kotlin backed by Python/FastAPI APIs, with encrypted local storage (SQLCipher), Android Keystore keys and certificate pinning. HatKart is a licence-management platform for markets without payment gateways.</p>
+        <div class="svc-tags"><span class="stag amb">Kotlin</span><span class="stag amb">Android</span><span class="stag amb">FastAPI</span></div>
+        <div class="svc-foot">FOCUS :: MOBILE</div>
+      </div>
+
+      <div class="svc-card r">
+        <div class="svc-lvl grn">SYSTEMS</div>
+        <div class="svc-ico grn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg></div>
+        <h3 class="svc-ti">Backend &amp; Systems</h3>
+        <p class="svc-de">REST APIs, databases and automation in Python and TypeScript, packaged with Docker and tested in GitHub Actions CI. My four open-source tools ship with more than 300 automated tests and documented validation.</p>
+        <div class="svc-tags"><span class="stag grn">Python</span><span class="stag grn">Docker</span><span class="stag grn">CI/CD</span></div>
+        <div class="svc-foot">FOCUS :: BACKEND</div>
+      </div>
+
+      <div class="svc-card r">
+        <div class="svc-lvl vio">NETWORKS</div>
+        <div class="svc-ico vio"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg></div>
+        <h3 class="svc-ti">Networks &amp; IT Infrastructure</h3>
+        <p class="svc-de">Networking fundamentals from my B.Sc. in Cybersecurity &amp; Networks, plus Linux, traffic analysis with Wireshark, scanning with Nmap and Cisco Networking Academy coursework.</p>
+        <div class="svc-tags"><span class="stag vio">Linux</span><span class="stag vio">Wireshark</span><span class="stag vio">Nmap</span></div>
+        <div class="svc-foot">FOCUS :: NETWORKS</div>
+      </div>
+
+      <div class="svc-card r">
+        <div class="svc-lvl red">SECURITY</div>
+        <div class="svc-ico red"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <h3 class="svc-ti">Cybersecurity</h3>
+        <p class="svc-de">Penetration-testing fundamentals (Burp Suite, Metasploit, Nmap) on web, Android and network targets, and secure development in practice: AES-GCM, certificate pinning, JWT hardening, input validation and RBAC.</p>
+        <div class="svc-tags"><span class="stag red">PENTEST</span><span class="stag red">AppSec</span><span class="stag red">RBAC</span></div>
+        <div class="svc-foot">FOCUS :: SECURITY</div>
+      </div>
+
+      <div class="svc-card r">
+        <div class="svc-lvl cyn">DFIR · OSS</div>
+        <div class="svc-ico cyn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div>
+        <h3 class="svc-ti">Forensics &amp; Open Source</h3>
+        <p class="svc-de">Digital-forensics and incident-response tooling (EVTX, NTFS $MFT, disk imaging), plus 5 merged pull requests to ForensicArtifacts (used by Plaso and Timesketch) and Velociraptor's registry_hunter.</p>
+        <div class="svc-tags"><span class="stag cyn">DFIR</span><span class="stag cyn">MITRE</span><span class="stag cyn">Sigma</span></div>
+        <div class="svc-foot">FOCUS :: DFIR &amp; OSS</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ SOFTWARE PROJECTS ═══════════════════════════════════ -->
+<section id="engineering" class="sect-alt">
+  <div class="container">
+    <div class="sec-hdr">
+      <span class="sec-lbl">// FULL STACK PROJECTS</span>
+      <h2 class="sec-ttl">Software Projects</h2>
+      <div class="sec-rule"></div>
+    </div>
+    <div class="case-list">
+
+      <div class="case-card eng-card r">
+        <div class="case-hdr">
+          <div class="case-meta"><span class="case-num">ENG #001</span><span class="case-cat">SaaS · MULTI-TENANT · ARABIC RTL · FULL-STACK SOLO</span></div>
+          <div class="case-badges"><span class="bsta dep"><span class="d"></span>v1.0</span></div>
+        </div>
+        <div class="case-body">
+          <div class="case-main">
+            <div class="case-stack">Next.js 14 · TypeScript · Node.js · PostgreSQL · Recharts · Framer Motion</div>
+            <h3 class="case-name">Nashiit — <span class="arabic-hl" lang="ar">نشيط</span></h3>
+            <p class="case-desc">Multi-tenant Arabic (RTL) SaaS platform for school activity management, built solo. The screenshots below show the running application.</p>
+            <ul class="case-points">
+              <li><strong>Six roles</strong> with role-based access: Super Admin, School Admin, Supervisor, Guidance Admin, Teacher, Student.</li>
+              <li><strong>Workflows:</strong> activity creation, supervisor approval queue, saved reports and student notifications.</li>
+              <li><strong>Platform admin:</strong> school registration, subscriptions and school-year management per tenant.</li>
+              <li><strong>Security:</strong> JWT blacklist, rate limiting and magic-byte file validation.</li>
+            </ul>
+            <div class="case-tags"><span class="ctag amb">TypeScript</span><span class="ctag vio">Next.js 14</span><span class="ctag vio">PostgreSQL</span><span class="ctag cyn">6-Role RBAC</span><span class="ctag cyn">JWT Blacklist</span><span class="ctag tel">Arabic RTL</span></div>
+
+            <!-- ── Nashiit Screenshots Gallery ──────────── -->
+            <div class="proj-screenshots">
+              <div class="ps-header">
+                <span class="ps-label">LIVE SCREENSHOTS · 16 SCREENS</span>
+                <div class="ps-tabs" role="tablist" aria-label="Screenshot groups">
+                  <button type="button" class="ps-tab active" role="tab" id="tab-nashiit-pub" aria-selected="true" aria-controls="nashiit-pub" data-target="nashiit-pub">Public UI</button>
+                  <button type="button" class="ps-tab" role="tab" id="tab-nashiit-int" aria-selected="false" aria-controls="nashiit-int" data-target="nashiit-int" tabindex="-1">6-Role Dashboards</button>
+                </div>
+              </div>
+              <div class="ps-strip" id="nashiit-pub" role="tabpanel" aria-labelledby="tab-nashiit-pub">
+                <button type="button" class="ps-thumb-wrap" data-cap="Nashiit — Home / Landing Page" aria-label="Open screenshot: Nashiit — Home / Landing Page"><img src="images/nashiit/01-home.webp" alt="" class="ps-thumb" width="960" height="825" loading="lazy" decoding="async"><span class="ps-role-badge" aria-hidden="true">HOME</span></button>
+                <button type="button" class="ps-thumb-wrap" data-cap="Nashiit — About Platform" aria-label="Open screenshot: Nashiit — About Platform"><img src="images/nashiit/02-about.webp" alt="" class="ps-thumb" width="960" height="825" loading="lazy" decoding="async"><span class="ps-role-badge" aria-hidden="true">ABOUT</span></button>
+                <button type="button" class="ps-thumb-wrap" data-cap="Nashiit — School Registration Form" aria-label="Open screenshot: Nashiit — School Registration Form"><img src="images/nashiit/03-school-registration.webp" alt="" class="ps-thumb" width="960" height="825" loading="lazy" decoding="async"><span class="ps-role-badge" aria-hidden="true">REGISTER</span></button>
+                <button type="button" class="ps-thumb-wrap" data-cap="Nashiit — Secure Login" aria-label="Open screenshot: Nashiit — Secure Login"><img src="images/nashiit/04-login.webp" alt="" class="ps-thumb" width="960" height="825" loading="lazy" decoding="async"><span class="ps-role-badge" aria-hidden="true">LOGIN</span></button>
+                <button type="button" class="ps-thumb-wrap" data-cap="Nashiit — Contact Page" aria-label="Open screenshot: Nashiit — Contact Page"><img src="images/nashiit/05-contact.webp" alt="" class="ps-thumb" width="960" height="825" loading="lazy" decoding="async"><span class="ps-role-badge" aria-hidden="true">CONTACT</span></button>
+              </div>
+              <div class="ps-strip hidden" id="nashiit-int" role="tabpanel" aria-labelledby="tab-nashiit-int">
+                <button type="button" class="ps-thumb-wrap" data-cap="Super Admin — Main Dashboard" aria-label="Open screenshot: Super Admin — Main Dashboard"><img src="images/nashiit-internal/01-super-admin-dashboard.webp" alt="" class="ps-thumb" width="900" height="774" loading="lazy" decoding="async"><span class="ps-role-badge" aria-hidden="true">SUPER ADMIN</span></button>
+                <button type="button" class="ps-thumb-wrap" data-cap="Super Admin — Schools Management" aria-label="Open screenshot: Super Admin — Schools Management"><img src="images/nashiit-internal/02-super-admin-schools.webp" alt="" class="ps-thumb" width="900" height="774" loading="lazy" decoding="async"><span class="ps-role-badge" aria-hidden="true">SCHOOLS</span></button>
+                <button type="button" class="ps-thumb-wrap" data-cap="Super Admin — Subscriptions" aria-label="Open screenshot: Super Admin — Subscriptions"><img src="images/nashiit-internal/03-super-admin-subscriptions.webp" alt="" class="ps-thumb" width="900" height="774" loading="lazy" decoding="async"><span class="ps-role-badge" aria-hidden="true">SUBSCRIPTIONS</span></button>
+                <button type="button" class="ps-thumb-wrap" data-cap="Super Admin — School Years" aria-label="Open screenshot: Super Admin — School Years"><img src="images/nashiit-internal/04-super-admin-school-years.webp" alt="" class="ps-thumb" width="900" height="774" loading="lazy" decoding="async"><span class="ps-role-badge" aria-hidden="true">SCHOOL YEARS</span></button>
+                <button type="button" class="ps-thumb-wrap" data-cap="School Admin — Dashboard" aria-label="Open screenshot: School Admin — Dashboard"><img src="images/nashiit-internal/05-school-admin-dashboard.webp" alt="" class="ps-thumb" width="900" height="774" loading="lazy" decoding="async"><span class="ps-role-badge" aria-hidden="true">SCHOOL ADMIN</span></button>
+                <button type="button" class="ps-thumb-wrap" data-cap="Supervisor — Dashboard" aria-label="Open screenshot: Supervisor — Dashboard"><img src="images/nashiit-internal/06-supervisor-dashboard.webp" alt="" class="ps-thumb" width="900" height="774" loading="lazy" decoding="async"><span class="ps-role-badge" aria-hidden="true">SUPERVISOR</span></button>
+                <button type="button" class="ps-thumb-wrap" data-cap="Supervisor — Pending Approvals" aria-label="Open screenshot: Supervisor — Pending Approvals"><img src="images/nashiit-internal/07-supervisor-pending-approval.webp" alt="" class="ps-thumb" width="900" height="774" loading="lazy" decoding="async"><span class="ps-role-badge" aria-hidden="true">APPROVALS</span></button>
+                <button type="button" class="ps-thumb-wrap" data-cap="Guidance Admin — Saved Reports" aria-label="Open screenshot: Guidance Admin — Saved Reports"><img src="images/nashiit-internal/08-guide-saved-reports.webp" alt="" class="ps-thumb" width="900" height="774" loading="lazy" decoding="async"><span class="ps-role-badge" aria-hidden="true">REPORTS</span></button>
+                <button type="button" class="ps-thumb-wrap" data-cap="Teacher — Dashboard" aria-label="Open screenshot: Teacher — Dashboard"><img src="images/nashiit-internal/09-teacher-dashboard.webp" alt="" class="ps-thumb" width="900" height="774" loading="lazy" decoding="async"><span class="ps-role-badge" aria-hidden="true">TEACHER</span></button>
+                <button type="button" class="ps-thumb-wrap" data-cap="Teacher — Create Activity" aria-label="Open screenshot: Teacher — Create Activity"><img src="images/nashiit-internal/10-teacher-create-activity.webp" alt="" class="ps-thumb" width="900" height="774" loading="lazy" decoding="async"><span class="ps-role-badge" aria-hidden="true">ACTIVITY</span></button>
+                <button type="button" class="ps-thumb-wrap" data-cap="Student — Notifications" aria-label="Open screenshot: Student — Notifications"><img src="images/nashiit-internal/11-student-notifications.webp" alt="" class="ps-thumb" width="900" height="774" loading="lazy" decoding="async"><span class="ps-role-badge" aria-hidden="true">STUDENT</span></button>
+              </div>
+            </div>
+
+          </div>
+          <div class="case-link-na">Private repository · code walkthrough on request</div>
+        </div>
+      </div>
+
+      <div class="case-card eng-card r">
+        <div class="case-hdr">
+          <div class="case-meta"><span class="case-num">ENG #002</span><span class="case-cat">ANDROID · PYTHON · SECURE LICENSING PLATFORM</span></div>
+          <div class="case-badges"><span class="bsta dep"><span class="d"></span>ANDROID</span></div>
+        </div>
+        <div class="case-body">
+          <div class="case-main">
+            <div class="case-stack">Kotlin · FastAPI · PostgreSQL · SQLCipher · Android Keystore · Certificate Pinning</div>
+            <h3 class="case-name">HatKart — <span class="arabic-hl amb-hl" lang="ar">هات كرت</span></h3>
+            <p class="case-desc">Full-stack software-licence management for markets without payment gateways: an Android (Kotlin) client and a Python FastAPI backend.</p>
+            <ul class="case-points">
+              <li><strong>Client:</strong> Kotlin Android app with encrypted local storage (AES-GCM + SQLCipher) and hardware-backed keys in the Android Keystore.</li>
+              <li><strong>Backend:</strong> FastAPI + PostgreSQL service using HMAC-SHA256.</li>
+              <li><strong>Hardening:</strong> certificate pinning (MITM prevention), multi-factor device fingerprinting and APK signature verification.</li>
+            </ul>
+            <div class="case-tags"><span class="ctag amb">Kotlin</span><span class="ctag amb">Python</span><span class="ctag vio">FastAPI</span><span class="ctag vio">PostgreSQL</span><span class="ctag cyn">Certificate Pinning</span><span class="ctag cyn">AES-GCM</span></div>
+
+            <div class="app-preview">
+              <img src="images/hatkart-icon.png" alt="HatKart app icon" class="app-icon-img" width="256" height="256" loading="lazy">
+              <div class="app-preview-info">
+                <span class="app-preview-label">Android App</span>
+                <span class="app-preview-name"><span lang="ar">هات كرت</span> / HatKart</span>
+                <span class="app-preview-sub">Secure License Management Platform</span>
+              </div>
+            </div>
+
+          </div>
+          <div class="case-link-na">Private repository · code walkthrough on request</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ SECURITY PROJECTS ══════════════════════════════════ -->
+<section id="projects">
+  <div class="container">
+    <div class="sec-hdr">
+      <span class="sec-lbl">// SECURITY &amp; DFIR · OPEN SOURCE</span>
+      <h2 class="sec-ttl">Security Projects</h2>
+      <div class="sec-rule"></div>
+    </div>
+    <p class="body-p" style="max-width:760px;margin:0 0 28px">Every project below has a <code>docs/VALIDATION.md</code> listing what was tested on real data, what was tested only with synthetic inputs, and what was not tested. Terminal blocks are excerpts of real runs.</p>
+    <div class="case-list">
+
+      <div class="case-card r">
+        <div class="case-hdr">
+          <div class="case-meta"><span class="case-num">CASE #001</span><span class="case-cat">DISK · $MFT · MEMORY FORENSICS</span></div>
+          <div class="case-badges"><span class="bsta dep"><span class="d"></span>v0.1.0</span></div>
+        </div>
+        <div class="case-body">
+          <div class="case-main">
+            <div class="case-stack">Python 3.11+ · No runtime dependencies · NTFS · Volatility 3 (optional)</div>
+            <h3 class="case-name">forensic-evidence-toolkit</h3>
+            <p class="case-desc">Forensic imaging with streaming hashes and a chain-of-custody record, an NTFS <code>$MFT</code> parser (attribute lists, extension records, timestomp heuristics) and a Volatility 3 triage wrapper. The <code>$MFT</code> output had <strong>0 differences</strong> against an independent parser (dfir_ntfs) on 25,408 real records, and 12,171 reconstructed file paths were identical to The Sleuth Kit's <code>fls</code>. Imaging a real block device produced the same SHA-256 as <code>sha256sum</code>.</p>
+            <p class="case-desc case-unverified"><strong>Not yet verified:</strong> memory triage was checked against the Volatility 3 source code only, not run on a real memory image; the timestomp heuristics flag many legitimately installed files, so they are leads, not proof.</p>
+            <div class="case-terminal">
+              <div class="ct-bar"><span>● TERMINAL · forensic-evidence-toolkit · real output (excerpt)</span></div>
+              <div class="ct-body">
+                <span class="ct-info">$ fet image evidence.bin ev.img --case DEMO-1 --examiner ... --hash sha256</span><br>
+                <span class="ct-dim">Image:      ev.img (3,000,000 bytes)</span><br>
+                <span class="ct-dim">SHA256      940519577bd29ed5...ffade2b5e48</span><br>
+                <span class="ct-ok">Verified:   YES</span><br>
+                <span class="ct-info">$ fet mft samples/MFT --format csv -o out.csv</span><br>
+                <span class="ct-dim">summary: records=13064, in_use=11837, deleted=1227, directories=981, with_ads=10</span>
+              </div>
+            </div>
+            <div class="case-tags"><span class="ctag cyn">Disk Imaging</span><span class="ctag cyn">NTFS $MFT</span><span class="ctag cyn">Timestomp Detection</span><span class="ctag cyn">Volatility 3</span><span class="ctag amb">Python</span><span class="ctag vio">GitHub Actions</span></div>
+          </div>
+          <div class="case-links">
+            <a href="https://github.com/Al-Gharbi/forensic-evidence-toolkit" target="_blank" rel="noopener" class="case-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>GitHub
+            </a>
+            <a href="https://github.com/Al-Gharbi/forensic-evidence-toolkit/blob/main/docs/VALIDATION.md" target="_blank" rel="noopener" class="case-link" title="What was tested on real data, what was not">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>VALIDATION
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="case-card r">
+        <div class="case-hdr">
+          <div class="case-meta"><span class="case-num">CASE #002</span><span class="case-cat">WINDOWS INCIDENT RESPONSE &amp; FORENSICS</span></div>
+          <div class="case-badges"><span class="bsta dep"><span class="d"></span>v0.2.0</span></div>
+        </div>
+        <div class="case-body">
+          <div class="case-main">
+            <div class="case-stack">Python · Sigma-subset rules · MITRE ATT&amp;CK · Bilingual EN/AR</div>
+            <h3 class="case-name">win-ir-triage</h3>
+            <p class="case-desc">Parses EVTX logs, evaluates 10 Sigma-subset rules mapped to MITRE ATT&amp;CK, and writes a bilingual (EN/AR) HTML timeline plus JSON and ATT&amp;CK Navigator exports. Run over all <strong>278 files</strong> of the public EVTX-ATTACK-SAMPLES dataset: 0 parse errors, 37,364 events, event counts identical to the dataset's own index, and 16 of 16 hand-labelled expectations passing (the labels were chosen after seeing results, so this is not a blind test).</p>
+            <p class="case-desc case-unverified"><strong>Not yet verified:</strong> the false-positive rate (the dataset contains attacks only) and detection of attacks the rules were not written for.</p>
+            <div class="case-terminal">
+              <div class="ct-bar"><span>● TERMINAL · win-ir-triage · real output (excerpt)</span></div>
+              <div class="ct-body">
+                <span class="ct-info">$ win-ir-triage --evtx System_7045_namedpipe_privesc.evtx</span><br>
+                <span class="ct-dim">win-ir-triage 0.2.0 - demo</span><br>
+                <span class="ct-dim">  Parsed 1 events from 1 file(s) using 10 rules</span><br>
+                <span class="ct-warn">  2019-05-12 12:52:43Z  [medium] IEWIN7  Suspicious Service Installation</span><br>
+                <span class="ct-warn">  (Possible PsExec-style Lateral Movement)</span><br>
+                <span class="ct-ok">  MITRE ATT&amp;CK techniques: T1569.002</span>
+              </div>
+            </div>
+            <div class="case-tags"><span class="ctag cyn">Digital Forensics</span><span class="ctag cyn">Incident Response</span><span class="ctag cyn">MITRE ATT&amp;CK</span><span class="ctag cyn">Sigma Rules</span><span class="ctag amb">Python</span><span class="ctag vio">GitHub Actions</span></div>
+          </div>
+          <div class="case-links">
+            <a href="https://github.com/Al-Gharbi/win-ir-triage" target="_blank" rel="noopener" class="case-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>GitHub
+            </a>
+            <a href="https://github.com/Al-Gharbi/win-ir-triage/blob/main/docs/VALIDATION.md" target="_blank" rel="noopener" class="case-link" title="What was tested on real data, what was not">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>VALIDATION
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="case-card r">
+        <div class="case-hdr">
+          <div class="case-meta"><span class="case-num">CASE #003</span><span class="case-cat">SMART CONTRACT STATIC ANALYSIS</span></div>
+          <div class="case-badges"><span class="bsta dep"><span class="d"></span>v1.1.0</span></div>
+        </div>
+        <div class="case-body">
+          <div class="case-main">
+            <div class="case-stack">CLI · Static analysis · Docker · Zero dependencies</div>
+            <h3 class="case-name">smart-audit</h3>
+            <p class="case-desc">Static analyser for Solidity with 18 SWC-mapped rules; five of them read the structure of each function (reentrancy, unchecked calls, unprotected selfdestruct, missing zero-address check, missing event) instead of matching text. HTML, JSON and Markdown reports with a per-contract score, and exit codes for CI. Pattern-based and noisy by design: a first pass, not a replacement for a manual audit.</p>
+            <p class="case-desc case-unverified"><strong>Not yet verified:</strong> behaviour on large real-world contract codebases; it performs no data-flow or cross-contract analysis.</p>
+            <div class="case-terminal">
+              <div class="ct-bar"><span>● TERMINAL · smart-audit · real output (excerpt)</span></div>
+              <div class="ct-body">
+                <span class="ct-info">$ smart-audit scan testdata/VulnerableVault.sol</span><br>
+                <span class="ct-dim">AUDIT SUMMARY  14 finding(s) in 1 contract(s)</span><br>
+                <span class="ct-err">[CRITICAL] Reentrancy Vulnerability  (line 22)</span><br>
+                <span class="ct-err">[CRITICAL] Unprotected selfdestruct  (line 35)</span><br>
+                <span class="ct-warn">[HIGH]     tx.origin Used for Authentication  (line 29)</span><br>
+                <span class="ct-dim">VulnerableVault.sol  [14 finding(s) · Risk 8.2/10]</span>
+              </div>
+            </div>
+            <div class="case-tags"><span class="ctag cyn">Smart Contract Security</span><span class="ctag cyn">18 Rules</span><span class="ctag vio">Docker</span><span class="ctag vio">GitHub Actions</span></div>
+          </div>
+          <div class="case-links"><a href="https://github.com/Al-Gharbi/smart-audit" target="_blank" rel="noopener" class="case-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>GitHub
+          </a></div>
+        </div>
+      </div>
+
+      <div class="case-card r">
+        <div class="case-hdr">
+          <div class="case-meta"><span class="case-num">CASE #004</span><span class="case-cat">EVM NODE SECURITY AUDIT</span></div>
+          <div class="case-badges"><span class="bsta dep"><span class="d"></span>v0.2.0</span></div>
+        </div>
+        <div class="case-body">
+          <div class="case-main">
+            <div class="case-stack">CLI · JSON-RPC · Geth &amp; Nethermind configs · Docker</div>
+            <h3 class="case-name">BlockSec Auditor</h3>
+            <p class="case-desc">Read-only auditor for Ethereum/EVM nodes: RPC exposure, admin and wallet APIs, CORS, TLS, client version against a curated advisory list, and Geth/Nethermind configuration files. Every outcome is PASS, FAIL, ERROR or SKIPPED; an unreachable node is never reported as clean. The advisory list matched Geth's own advisory data on <strong>241 real releases</strong>, and the config audit ran on 91 real Nethermind configs without errors.</p>
+            <p class="case-desc case-unverified"><strong>Not yet verified:</strong> no live node has been scanned yet; the RPC checks are covered by tests against a mock server only. Only Geth has verified advisory data.</p>
+            <div class="case-terminal">
+              <div class="ct-bar"><span>● TERMINAL · blocksec-auditor · real output (excerpt)</span></div>
+              <div class="ct-body">
+                <span class="ct-info">$ blocksec-auditor audit --config-file spaceneth.json</span><br>
+                <span class="ct-warn">FAIL    [LOW     ] BSA-CFG-001  Configuration File Weaknesses</span><br>
+                <span class="ct-dim">         JSON-RPC exposes dangerous module(s) Admin, Debug, Personal (loopback only)</span><br>
+                <span class="ct-dim">0 passed, 1 failed, 0 error, 0 skipped  (failed: 1 LOW)</span>
+              </div>
+            </div>
+            <div class="case-tags"><span class="ctag cyn">Blockchain Security</span><span class="ctag cyn">Config Audit</span><span class="ctag cyn">Read-only</span><span class="ctag vio">Docker</span></div>
+          </div>
+          <div class="case-links">
+            <a href="https://github.com/Al-Gharbi/blocksec-auditor" target="_blank" rel="noopener" class="case-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>GitHub
+            </a>
+            <a href="https://github.com/Al-Gharbi/blocksec-auditor/blob/main/docs/VALIDATION.md" target="_blank" rel="noopener" class="case-link" title="What was tested on real data, what was not">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>VALIDATION
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Upstream contributions: links point to the public pull requests -->
+    <div class="contrib r">
+      <div class="contrib-hdr">
+        <span class="contrib-lbl">// UPSTREAM CONTRIBUTIONS</span>
+        <span class="contrib-note">5 merged · 1 open · all public on GitHub</span>
+      </div>
+      <ul class="contrib-list">
+        <li><a href="https://github.com/Velocidex/registry_hunter/pull/37" target="_blank" rel="noopener"><span class="cb-repo">Velociraptor registry_hunter #37</span><span class="cb-title">Added WDigest (UseLogonCredential) rule</span><span class="cb-state merged">MERGED</span></a></li>
+        <li><a href="https://github.com/ForensicArtifacts/artifacts/pull/682" target="_blank" rel="noopener"><span class="cb-repo">ForensicArtifacts #682</span><span class="cb-title">Added PuTTY registry key definitions</span><span class="cb-state merged">MERGED</span></a></li>
+        <li><a href="https://github.com/Velocidex/registry_hunter/pull/35" target="_blank" rel="noopener"><span class="cb-repo">Velociraptor registry_hunter #35</span><span class="cb-title">Added LSA Protection (RunAsPPL) rule</span><span class="cb-state merged">MERGED</span></a></li>
+        <li><a href="https://github.com/ForensicArtifacts/artifacts/pull/679" target="_blank" rel="noopener"><span class="cb-repo">ForensicArtifacts #679</span><span class="cb-title">Added WindowsEventTranscriptDatabaseFile definition</span><span class="cb-state merged">MERGED</span></a></li>
+        <li><a href="https://github.com/ForensicArtifacts/artifacts/pull/678" target="_blank" rel="noopener"><span class="cb-repo">ForensicArtifacts #678</span><span class="cb-title">Added AnyDesk and TeamViewer definitions</span><span class="cb-state merged">MERGED</span></a></li>
+        <li><a href="https://github.com/SigmaHQ/sigma/pull/6458" target="_blank" rel="noopener"><span class="cb-repo">SigmaHQ/sigma #6458</span><span class="cb-title">New rule: MSBuild Exec Task Temporary Batch File Executed Via Cmd</span><span class="cb-state open">OPEN</span></a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SKILLS ════════════════════════════════════════════ -->
+<section id="skills" class="sect-alt">
+  <div class="container">
+    <div class="sec-hdr">
+      <span class="sec-lbl">// TECHNICAL STACK</span>
+      <h2 class="sec-ttl">Skills &amp; Technologies</h2>
+      <div class="sec-rule"></div>
+    </div>
+    <div class="sk-grid">
+
+      <div class="sk-card r">
+        <div class="sk-hdr">
+          <div class="sk-ico amb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
+          <div class="sk-name">Web &amp; Mobile Development</div>
+        </div>
+        <div class="sk-sub">Used in my projects</div>
+        <div class="sk-tags"><span class="stag amb">Full Stack (Next.js + Node.js)</span><span class="stag amb">TypeScript</span><span class="stag amb">Next.js 14</span><span class="stag amb">Kotlin (Android)</span><span class="stag amb">Node.js</span><span class="stag amb">REST APIs</span><span class="stag amb">HTML / CSS / JavaScript</span><span class="stag amb">Arabic RTL UI</span></div>
+      </div>
+
+      <div class="sk-card r">
+        <div class="sk-hdr">
+          <div class="sk-ico cyn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><polyline points="5 8 9 12 5 16"/><line x1="13" y1="12" x2="19" y2="12"/></svg></div>
+          <div class="sk-name">Backend, Data &amp; DevOps</div>
+        </div>
+        <div class="sk-sub">Used in my projects</div>
+        <div class="sk-tags"><span class="stag cyn">Python</span><span class="stag cyn">FastAPI</span><span class="stag cyn">PostgreSQL</span><span class="stag cyn">SQL</span><span class="stag cyn">Docker</span><span class="stag cyn">GitHub Actions (CI/CD)</span><span class="stag cyn">Automated Testing</span><span class="stag cyn">Bash</span><span class="stag cyn">PowerShell</span></div>
+      </div>
+
+      <div class="sk-card r">
+        <div class="sk-hdr">
+          <div class="sk-ico vio"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg></div>
+          <div class="sk-name">Networks &amp; Systems</div>
+        </div>
+        <div class="sk-sub">Degree coursework + hands-on tools</div>
+        <div class="sk-tags"><span class="stag vio">Networking Fundamentals</span><span class="stag vio">Linux</span><span class="stag vio">Kali Linux</span><span class="stag vio">Wireshark</span><span class="stag vio">Nmap</span><span class="stag vio">Operating Systems</span></div>
+      </div>
+
+      <div class="sk-card r">
+        <div class="sk-hdr">
+          <div class="sk-ico red"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div>
+          <div class="sk-name">Security &amp; Forensics</div>
+        </div>
+        <div class="sk-sub">Tools I built, tested and contributed to</div>
+        <div class="sk-tags"><span class="stag red">Penetration Testing (fundamentals)</span><span class="stag red">Burp Suite</span><span class="stag red">Metasploit</span><span class="stag red">Secure Coding (AES-GCM, JWT, RBAC)</span><span class="stag red">Android Security</span><span class="stag red">DFIR</span><span class="stag red">EVTX / Windows Logs</span><span class="stag red">NTFS $MFT</span><span class="stag red">Disk Imaging</span><span class="stag red">MITRE ATT&amp;CK</span><span class="stag red">Sigma Rules</span></div>
+      </div>
+
+      <div class="sk-card sk-wide r">
+        <div class="sk-hdr">
+          <div class="sk-ico tel"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg></div>
+          <div class="sk-name">Fundamentals, Learning &amp; Personal</div>
+        </div>
+        <div class="sk-sub">Working knowledge</div>
+        <div class="sk-tags"><span class="stag tel">C / C++</span><span class="stag tel">C#</span><span class="stag tel">Data Structures</span><span class="stag tel">Algorithms</span><span class="stag tel">OOP</span><span class="stag tel">Reverse Engineering (Android basics)</span></div>
+        <div class="sk-sub">Learning</div>
+        <div class="sk-tags"><span class="stag tel learn">Cloud Security</span><span class="stag tel learn">DevSecOps</span><span class="stag tel learn">Memory Forensics (Volatility 3)</span></div>
+        <div class="sk-sub">Personal</div>
+        <div class="sk-tags"><span class="stag tel">Problem Solving</span><span class="stag tel">Creativity</span><span class="stag tel">Persistence</span></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ CERTIFICATIONS ════════════════════════════════════ -->
+<section id="certs">
+  <div class="container">
+    <div class="sec-hdr">
+      <span class="sec-lbl">// TRAINING RECORD</span>
+      <h2 class="sec-ttl">Courses &amp; Certificates</h2>
+      <div class="sec-rule"></div>
+    </div>
+    <div class="cert-grid">
+      <div class="cert-card r"><div class="cert-seal">COMPLETED</div><div class="cert-yr">2024–2025</div><div class="cert-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div><h3 class="cert-nm">Ethical Hacker</h3><p class="cert-is">Cisco Networking Academy</p><div class="cert-bd">CISCO</div></div>
+      <div class="cert-card r"><div class="cert-seal">COMPLETED</div><div class="cert-yr">2024</div><div class="cert-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div><h3 class="cert-nm">Junior Penetration Tester</h3><p class="cert-is">NetRiders Academy</p><div class="cert-bd">NETRIDERS</div></div>
+      <div class="cert-card r"><div class="cert-seal">COMPLETED</div><div class="cert-yr">2024</div><div class="cert-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div><h3 class="cert-nm">Reverse Engineering Android Apps</h3><p class="cert-is">Online course</p><div class="cert-bd">ONLINE COURSE</div></div>
+      <div class="cert-card r"><div class="cert-seal">COMPLETED</div><div class="cert-yr">2024</div><div class="cert-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div><h3 class="cert-nm">Dynamic Instrumentation</h3><p class="cert-is">Online course</p><div class="cert-bd">ONLINE COURSE</div></div>
+      <div class="cert-card r"><div class="cert-seal">COMPLETED</div><div class="cert-yr">2024</div><div class="cert-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h3 class="cert-nm">Introduction to Cybersecurity</h3><p class="cert-is">Cisco Networking Academy</p><div class="cert-bd">CISCO</div></div>
+      <div class="cert-card r"><div class="cert-seal">COMPLETED</div><div class="cert-yr">2024</div><div class="cert-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg></div><h3 class="cert-nm">Algorithms &amp; Problem Solving</h3><p class="cert-is">ProgrammingAdvices</p><div class="cert-bd">PROG. ADVICE</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ EDUCATION ══════════════════════════════════════════ -->
+<section id="education" class="sect-alt">
+  <div class="container">
+    <div class="sec-hdr">
+      <span class="sec-lbl">// ACADEMIC RECORD</span>
+      <h2 class="sec-ttl">Education</h2>
+      <div class="sec-rule"></div>
+    </div>
+    <div class="edu-card r">
+      <div class="edu-top"><span class="edu-dot"></span>CURRENT ENROLLMENT :: FINAL YEAR</div>
+      <div class="edu-body">
+        <div>
+          <div class="edu-deg">B.Sc. Cybersecurity &amp; Networks</div>
+          <div class="edu-uni">Alqalam University · Ibb, Yemen · Final year (Level 4)</div>
+        </div>
+        <div class="edu-yr">2023 – 2027 (expected)</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CONTACT ════════════════════════════════════════════ -->
+<section id="contact">
+  <div class="container">
+    <div class="sec-hdr">
+      <span class="sec-lbl">// LET'S TALK</span>
+      <h2 class="sec-ttl">Get In Touch</h2>
+      <div class="sec-rule"></div>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-left">
+        <p class="body-p">Open to full-time roles, freelance or hourly projects, and internships in <strong>web and app development</strong>, <strong>backend and systems engineering</strong>, <strong>networks and IT</strong>, and <strong>security</strong> (DFIR, pentesting fundamentals). Also open to research programs and academic scholarships.</p>
+        <div class="avail-clock">
+          <div class="avail-clock-lbl">Local Time · Ibb, Yemen (UTC+3)</div>
+          <div class="avail-clock-time" id="avail-time">--:--:--</div>
+          <div class="avail-clock-tz">UTC+3 · <span id="avail-day">---</span> · <span id="avail-status" class="ct-enc">AVAILABLE ANY TIME</span></div>
+        </div>
+        <div class="ct-status"><span class="ct-dot"></span><span>OPEN TO WORK</span></div>
+      </div>
+      <div class="contact-links">
+        <a href="cv/Abdulrahman-Al-Gharbi-CV.pdf" download class="ct-link r">
+          <div class="ct-ic amb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><polyline points="9 15 12 18 15 15"/></svg></div>
+          <div class="ct-info"><div class="ct-type">Resume</div><div class="ct-val">Download CV (PDF)</div></div>
+          <span class="ct-arr" aria-hidden="true">↓</span>
+        </a>
+        <a href="mailto:aalgharbi651@gmail.com" class="ct-link r">
+          <div class="ct-ic cyn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+          <div class="ct-info"><div class="ct-type">Email</div><div class="ct-val">aalgharbi651@gmail.com</div></div>
+          <span class="ct-arr" aria-hidden="true">↗</span>
+        </a>
+        <a href="https://wa.me/967777541532" target="_blank" rel="noopener" class="ct-link r">
+          <div class="ct-ic grn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+          <div class="ct-info"><div class="ct-type">WhatsApp</div><div class="ct-val">+967 777 541 532</div></div>
+          <span class="ct-arr" aria-hidden="true">↗</span>
+        </a>
+        <a href="https://linkedin.com/in/abdulrahman-al-gharbi" target="_blank" rel="noopener" class="ct-link r">
+          <div class="ct-ic vio"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div>
+          <div class="ct-info"><div class="ct-type">LinkedIn</div><div class="ct-val">abdulrahman-al-gharbi</div></div>
+          <span class="ct-arr" aria-hidden="true">↗</span>
+        </a>
+        <a href="https://github.com/Al-Gharbi" target="_blank" rel="noopener" class="ct-link r">
+          <div class="ct-ic tel"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg></div>
+          <div class="ct-info"><div class="ct-type">GitHub</div><div class="ct-val">github.com/Al-Gharbi</div></div>
+          <span class="ct-arr" aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ══ FOOTER ════════════════════════════════════════════ -->
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-sys" dir="ltr">
+        <div class="fs-row"><span class="fs-k">SYSTEM </span><span class="fs-v">PORTFOLIO :: SOFTWARE &amp; SECURITY</span></div>
+        <div class="fs-row"><span class="fs-k">AGENT  </span><span class="fs-v">ABDULRAHMAN.AL-GHARBI</span></div>
+        <div class="fs-row"><span class="fs-k">STATUS </span><span class="fs-v grn">● ONLINE · OPEN TO WORK</span></div>
+        <div class="fs-row"><span class="fs-k">SESSION</span><span class="fs-v" id="foot-up">00:00:00</span></div>
+      </div>
+      <div class="foot-links">
+        <a href="https://github.com/Al-Gharbi" target="_blank" rel="noopener">GitHub ↗</a>
+        <a href="https://linkedin.com/in/abdulrahman-al-gharbi" target="_blank" rel="noopener">LinkedIn ↗</a>
+        <a href="mailto:aalgharbi651@gmail.com">Email ↗</a>
+        <a href="https://wa.me/967777541532" target="_blank" rel="noopener">WhatsApp ↗</a>
+      </div>
+    </div>
+    <div class="foot-quote">"Security through understanding — not just defense."</div>
+    <div class="foot-copy">© 2026 ABDULRAHMAN AL-GHARBI · ALL RIGHTS RESERVED</div>
+  </div>
+</footer>
+
+<!-- ══ HIRE FLOAT ════════════════════════════════════════ -->
+<div class="hire-float is-hidden" id="hire-float">
+  <div class="hf-opts" id="hf-opts">
+    <a href="mailto:aalgharbi651@gmail.com" class="hf-opt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="14" height="14" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg> Email</a>
+    <a href="https://wa.me/967777541532" target="_blank" rel="noopener" class="hf-opt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="14" height="14" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> WhatsApp</a>
+  </div>
+  <button class="hf-btn" id="hf-btn" type="button" aria-label="Contact me" aria-expanded="false" aria-controls="hf-opts"><span class="hf-dot"></span><svg class="hf-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="20" height="20" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><span class="hf-txt">Hire Me</span></button>
+</div>
+
+<!-- ══ LIGHTBOX ══════════════════════════════════════════ -->
+<div id="lightbox" class="lb" role="dialog" aria-modal="true" aria-label="Screenshot viewer" aria-hidden="true" inert tabindex="-1">
+  <div class="lb-inner">
+    <button class="lb-x" type="button" aria-label="Close viewer">✕</button>
+    <button class="lb-arrow lb-prev" type="button" aria-label="Previous screenshot">&#8249;</button>
+    <button class="lb-arrow lb-next" type="button" aria-label="Next screenshot">&#8250;</button>
+    <img id="lb-img" class="lb-img" alt="">
+    <div id="lb-thumbs" class="lb-thumbs"></div>
+    <div class="lb-info" aria-live="polite">
+      <span id="lb-caption" class="lb-caption"></span>
+      <span id="lb-counter" class="lb-counter"></span>
+    </div>
+  </div>
+</div>
+
+<script src="js/gallery.js" defer></script>
+<script src="js/boot.js" defer></script>
+<script src="js/canvas.js" defer></script>
+<script src="js/roles.js" defer></script>
+<script src="js/ui.js" defer></script>
+
+</body>
+</html>
